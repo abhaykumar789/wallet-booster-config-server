@@ -1,0 +1,2 @@
+# wallet-booster-config-server
+

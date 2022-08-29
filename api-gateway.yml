@@ -30,3 +30,10 @@ spring:
           filters:
             - RewritePath=/email-service(?<segment>/?.*), $\{segment}
 
+        - id: user-service
+          uri: http://localhost:8082
+          predicates:
+            - Path=/user-service/**
+          filters:
+            - RewritePath=/user-service(?<segment>/?.*), $\{segment}
+          

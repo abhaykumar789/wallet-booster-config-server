@@ -5,7 +5,7 @@ spring:
   datasource:
     url: jdbc:mysql://@localhost:3306/authapp
     username: root
-    password: RK011@mysql
+    password: Rk011@mysql
  
 
   jpa:

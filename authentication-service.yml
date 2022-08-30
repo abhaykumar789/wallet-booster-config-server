@@ -19,3 +19,9 @@ spring:
         registration:
           google:
             client-id: 881729232741-2eanekf6fm66b6cip6nqahbuak2ch3sm.ap
+            
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

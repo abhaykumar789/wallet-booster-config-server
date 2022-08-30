@@ -50,3 +50,10 @@ spring:
             - Path=/Blog/**
           filters:
             - RewritePath=/Blog(?<segment>/?.*), $\{segment}
+
+        - id: tax-calculator-service
+          uri: http://localhost:8083
+          predicates:
+            - Path=/tax-calculator-service/**
+          filters:
+            - RewritePath=/tax-calculator-service(?<segment>/?.*), $\{segment}

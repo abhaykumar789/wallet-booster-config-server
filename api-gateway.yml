@@ -57,3 +57,11 @@ spring:
             - Path=/tax-calculator-service/**
           filters:
             - RewritePath=/tax-calculator-service(?<segment>/?.*), $\{segment}
+
+        - id: recommendation-service
+          uri: http://localhost:5500
+          predicates:
+            - Path=/recommendation-service/**
+          filters:
+            - RewritePath=/recommendation-service(?<segment>/?.*), $\{segment}
+

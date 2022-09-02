@@ -1,3 +1,10 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
+
 server:
   port: 8080
 
@@ -71,4 +78,11 @@ spring:
             - Path=/chat-service/**
           filters:
             - RewritePath=/chat-service(?<segment>/?.*), $\{segment}
+
+        - id: product-webapp
+          uri: http://localhost:4200
+          predicates:
+            - Path=/**
+          filters:
+            - RewritePath=(?<segment>/?.*), $\{segment}
 
